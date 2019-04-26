@@ -300,9 +300,9 @@
       
         
           
-            <h1 id="1-IDA2016数据集介绍"><a href="#1-IDA2016数据集介绍" class="headerlink" title="1. IDA2016数据集介绍"></a>1. IDA2016数据集介绍</h1><p>该数据集包括在日常使用中从重型卡车收集的数据。所关注的系统是空气压力系统（APS）。<strong><em>数据集的正类表示与APS系统相关的汽车故障。数据集的负类表示与APS无关的汽车故障。</em></strong></p>
+            <h1 id="IDA2016数据集介绍"><a href="#IDA2016数据集介绍" class="headerlink" title="IDA2016数据集介绍"></a>IDA2016数据集介绍</h1><p>该数据集包括在日常使用中从重型卡车收集的数据。所关注的系统是空气压力系统（APS）。<strong><em>数据集的正类表示与APS系统相关的汽车故障。数据集的负类表示与APS无关的汽车故障。</em></strong></p>
 <p>IDA 2016 Industrial Challenge的目标是将卡车气压系统(APS)的维护成本降到最低。因此，在验证时，<strong><em>如果模型将负类判为正类，则代价是10，如果将正类判为负类，则代价是500。</em></strong>这就满足了成本最小化的需求。</p>
-<h1 id="2-IDA2016数据集说明"><a href="#2-IDA2016数据集说明" class="headerlink" title="2. IDA2016数据集说明"></a>2. IDA2016数据集说明</h1><p>数据集的属性名称已匿名。该数据集总共有171个变量，其中包含1个类变量、100个单数值变量和7个直方图变量，每个直方图变量由10个单值变量（箱子）组成。缺失值用“na”表示。</p>
+<h1 id="IDA2016数据集说明"><a href="#IDA2016数据集说明" class="headerlink" title="IDA2016数据集说明"></a>IDA2016数据集说明</h1><p>数据集的属性名称已匿名。该数据集总共有171个变量，其中包含1个类变量、100个单数值变量和7个直方图变量，每个直方图变量由10个单值变量（箱子）组成。缺失值用“na”表示。</p>
 <p>训练集包含60000行，其中1000行属于正类，59000行属于负类。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">print(os.getcwd())</span><br></pre></td></tr></table></figure>
 <pre><code>F:\MyDocument\Project\Cloud_Robot\IDA2016\main
@@ -317,7 +317,6 @@
 <th>ac_000</th>
 <th>ad_000</th>
 <th>…</th>
-<th>ee_007</th>
 <th>ee_008</th>
 <th>ee_009</th>
 <th>ef_000</th>
@@ -332,7 +331,6 @@
 <td>2130706438</td>
 <td>280</td>
 <td>…</td>
-<td>157956</td>
 <td>73224</td>
 <td>0</td>
 <td>0</td>
@@ -345,7 +343,6 @@
 <td>0</td>
 <td>na</td>
 <td>…</td>
-<td>81140</td>
 <td>97576</td>
 <td>1500</td>
 <td>0</td>
@@ -358,7 +355,6 @@
 <td>228</td>
 <td>100</td>
 <td>…</td>
-<td>158022</td>
 <td>95128</td>
 <td>514</td>
 <td>0</td>
@@ -373,7 +369,6 @@
 <td>…</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 <td>4</td>
 <td>32</td>
 </tr>
@@ -384,7 +379,6 @@
 <td>1368</td>
 <td>458</td>
 <td>…</td>
-<td>311560</td>
 <td>433954</td>
 <td>1218</td>
 <td>0</td>
@@ -402,7 +396,6 @@
 <th>ac_000</th>
 <th>ad_000</th>
 <th>…</th>
-<th>ee_007</th>
 <th>ee_008</th>
 <th>ee_009</th>
 <th>ef_000</th>
@@ -417,7 +410,6 @@
 <td>20</td>
 <td>12</td>
 <td>…</td>
-<td>88</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -430,7 +422,6 @@
 <td>68</td>
 <td>40</td>
 <td>…</td>
-<td>462</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -443,7 +434,6 @@
 <td>212</td>
 <td>112</td>
 <td>…</td>
-<td>153680</td>
 <td>516</td>
 <td>0</td>
 <td>0</td>
@@ -456,7 +446,6 @@
 <td>1010</td>
 <td>936</td>
 <td>…</td>
-<td>210074</td>
 <td>281662</td>
 <td>3232</td>
 <td>0</td>
@@ -469,7 +458,6 @@
 <td>156</td>
 <td>140</td>
 <td>…</td>
-<td>482</td>
 <td>76</td>
 <td>0</td>
 <td>0</td>
@@ -477,7 +465,7 @@
 </tr>
 </tbody>
 </table>
-<h1 id="3-数据清洗"><a href="#3-数据清洗" class="headerlink" title="3. 数据清洗"></a>3. 数据清洗</h1><p>数据集中每个属性包含最多82%的缺失值。此外，许多属性包含异常值。 因此，我们选择用中位数替换缺失值。</p>
+<h1 id="数据清洗"><a href="#数据清洗" class="headerlink" title="数据清洗"></a>数据清洗</h1><p>数据集中每个属性包含最多82%的缺失值。此外，许多属性包含异常值。 因此，我们选择用中位数替换缺失值。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">attr_filter</span><span class="params">(df, key)</span>:</span></span><br><span class="line">    all_attrs = df.columns.values</span><br><span class="line">    df_ = pd.DataFrame([])</span><br><span class="line">    <span class="keyword">for</span> attr <span class="keyword">in</span> all_attrs:</span><br><span class="line">        <span class="keyword">if</span> key <span class="keyword">in</span> attr:</span><br><span class="line">            df_[attr] = df[attr]</span><br><span class="line">    <span class="keyword">return</span> df_</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">data_cleaner</span><span class="params">(df)</span>:</span></span><br><span class="line">    cols = df.columns.values</span><br><span class="line">    df = df.replace(<span class="string">'na'</span>, np.nan).astype(<span class="string">'float'</span>)</span><br><span class="line">    medians = df.median(axis=<span class="number">0</span>, skipna=<span class="literal">True</span>)</span><br><span class="line">    <span class="keyword">for</span> col <span class="keyword">in</span> cols:</span><br><span class="line">        df[col].fillna(medians[col], inplace=<span class="literal">True</span>)</span><br><span class="line">    <span class="keyword">return</span> df</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data_train.loc[:, <span class="string">'aa_000'</span>: ] = data_cleaner(data_train.loc[:, <span class="string">'aa_000'</span>: ])</span><br><span class="line">data_train.head()</span><br></pre></td></tr></table></figure>
@@ -488,9 +476,7 @@
 <th>aa_000</th>
 <th>ab_000</th>
 <th>ac_000</th>
-<th>ad_000</th>
 <th>…</th>
-<th>ee_007</th>
 <th>ee_008</th>
 <th>ee_009</th>
 <th>ef_000</th>
@@ -503,9 +489,7 @@
 <td>76698.0</td>
 <td>0.0</td>
 <td>2.130706e+09</td>
-<td>280.0</td>
 <td>…</td>
-<td>157956.0</td>
 <td>73224.0</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -516,9 +500,7 @@
 <td>33058.0</td>
 <td>0.0</td>
 <td>0.000000e+00</td>
-<td>126.0</td>
 <td>…</td>
-<td>81140.0</td>
 <td>97576.0</td>
 <td>1500.0</td>
 <td>0.0</td>
@@ -529,9 +511,7 @@
 <td>41040.0</td>
 <td>0.0</td>
 <td>2.280000e+02</td>
-<td>100.0</td>
 <td>…</td>
-<td>158022.0</td>
 <td>95128.0</td>
 <td>514.0</td>
 <td>0.0</td>
@@ -542,9 +522,7 @@
 <td>12.0</td>
 <td>0.0</td>
 <td>7.000000e+01</td>
-<td>66.0</td>
 <td>…</td>
-<td>0.0</td>
 <td>0.0</td>
 <td>0.0</td>
 <td>4.0</td>
@@ -555,9 +533,7 @@
 <td>60874.0</td>
 <td>0.0</td>
 <td>1.368000e+03</td>
-<td>458.0</td>
 <td>…</td>
-<td>311560.0</td>
 <td>433954.0</td>
 <td>1218.0</td>
 <td>0.0</td>
@@ -575,7 +551,6 @@
 <th>ac_000</th>
 <th>ad_000</th>
 <th>…</th>
-<th>ee_007</th>
 <th>ee_008</th>
 <th>ee_009</th>
 <th>ef_000</th>
@@ -590,7 +565,6 @@
 <td>20.0</td>
 <td>12.0</td>
 <td>…</td>
-<td>88.0</td>
 <td>0.0</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -603,7 +577,6 @@
 <td>68.0</td>
 <td>40.0</td>
 <td>…</td>
-<td>462.0</td>
 <td>0.0</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -616,7 +589,6 @@
 <td>212.0</td>
 <td>112.0</td>
 <td>…</td>
-<td>153680.0</td>
 <td>516.0</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -629,7 +601,6 @@
 <td>1010.0</td>
 <td>936.0</td>
 <td>…</td>
-<td>210074.0</td>
 <td>281662.0</td>
 <td>3232.0</td>
 <td>0.0</td>
@@ -642,7 +613,6 @@
 <td>156.0</td>
 <td>140.0</td>
 <td>…</td>
-<td>482.0</td>
 <td>76.0</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -650,7 +620,7 @@
 </tr>
 </tbody>
 </table>
-<h1 id="4-数据分析"><a href="#4-数据分析" class="headerlink" title="4. 数据分析"></a>4. 数据分析</h1><p>根据观察推测，每个直方图变量的和表示APS的年龄。此外，大多数故障可以通过使用一两个特性来预测。因此，最难的部分是正确地预测十分接近非故障（负类）的故障（正类）。我们使用的一些视觉检查方法是:</p>
+<h1 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h1><p>根据观察推测，每个直方图变量的和表示APS的年龄。此外，大多数故障可以通过使用一两个特性来预测。因此，最难的部分是正确地预测十分接近非故障（负类）的故障（正类）。我们使用的一些视觉检查方法是:</p>
 <ul>
 <li>框形图，用于获得方差。</li>
 <li>相关矩阵，用于识别相关特征。</li>
@@ -659,9 +629,9 @@
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data_pos = data_train[data_train[<span class="string">'class'</span>] == <span class="string">'pos'</span>]</span><br><span class="line">data_neg = data_train[data_train[<span class="string">'class'</span>] == <span class="string">'neg'</span>]</span><br><span class="line">data_pos_mean = data_pos.mean(axis=<span class="number">0</span>)</span><br><span class="line">data_neg_mean = data_neg.mean(axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">APS_correlation_matrix</span><span class="params">(df, title)</span>:</span></span><br><span class="line">    df_ = df.corr()</span><br><span class="line">    f, ax= plt.subplots(figsize = (<span class="number">14</span>, <span class="number">10</span>))</span><br><span class="line">    ax.set_title(title)</span><br><span class="line">    sns.heatmap(df_, vmin=<span class="number">-1</span>, vmax=<span class="number">1</span>, cmap=<span class="string">'RdBu'</span>, ax=ax, linewidth=<span class="number">0.01</span>)</span><br><span class="line">    plt.show()</span><br><span class="line"></span><br><span class="line">APS_correlation_matrix(attr_filter(data_pos, <span class="string">'000'</span>), <span class="string">'APS Correlation Matrix Pos'</span>)</span><br><span class="line">APS_correlation_matrix(attr_filter(data_neg, <span class="string">'000'</span>), <span class="string">'APS Correlation Matrix Neg'</span>)</span><br></pre></td></tr></table></figure>
-<p><img src="/2019/04/26/IDA2016_Reimplement/./IDA2016_Reimplement/output_13_0.png" alt="png"></p>
-<p><img src="/2019/04/26/IDA2016_Reimplement/./IDA2016_Reimplement/output_13_1.png" alt="png"></p>
-<h1 id="5-特征工程"><a href="#5-特征工程" class="headerlink" title="5.特征工程"></a>5.特征工程</h1><p>在以上分析中，我们只考虑了每个直方图的总和并排除了单数值变量，但却忽视了直方图变量的分布。因此，我们为每个直方图变量计算了16个不同的特征。所有这些特征都是使用2个不同距离函数到4种分布的距离。</p>
+<p><img src="/2019/04/26/IDA2016_Reimplement/output_13_0.png" alt="png"></p>
+<p><img src="/2019/04/26/IDA2016_Reimplement/output_13_1.png" alt="png"></p>
+<h1 id="特征工程"><a href="#特征工程" class="headerlink" title="特征工程"></a>特征工程</h1><p>在以上分析中，我们只考虑了每个直方图的总和并排除了单数值变量，但却忽视了直方图变量的分布。因此，我们为每个直方图变量计算了16个不同的特征。所有这些特征都是使用2个不同距离函数到4种分布的距离。</p>
 <p>2个距离函数分别是：</p>
 <ul>
 <li>卡方距离( $\chi^2$ Distance )。</li>
@@ -674,20 +644,20 @@
 <li>正态分布。参数 $\mu = 5, \sigma = 1.5$ 。</li>
 <li>镜像正态分布。它是将第三种正态分布关于x轴对称，然后，平移到$x$轴上方得到的。</li>
 </ul>
-<h2 id="5-1-归一化"><a href="#5-1-归一化" class="headerlink" title="5.1 归一化"></a>5.1 归一化</h2><p>所有上述距离都与直方图变量箱的高度总和有关。为了解决这种依赖性，将直方图变量按其总和进行归一化。使用这些额外的直方图变量，按照上述方法计算出与4种分布的距离。</p>
+<h2 id="归一化"><a href="#归一化" class="headerlink" title="归一化"></a>归一化</h2><p>所有上述距离都与直方图变量箱的高度总和有关。为了解决这种依赖性，将直方图变量按其总和进行归一化。使用这些额外的直方图变量，按照上述方法计算出与4种分布的距离。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Histograms_Norm</span><span class="params">(df)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> df.apply(<span class="keyword">lambda</span> x: (x/np.sum(x)), axis=<span class="number">1</span>).fillna(<span class="number">0.1</span>) <span class="comment">#防止sum(x) = 0的情况</span></span><br></pre></td></tr></table></figure>
-<h2 id="5-2-卡方距离"><a href="#5-2-卡方距离" class="headerlink" title="5.2 卡方距离"></a>5.2 卡方距离</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Chisquare_Distance</span><span class="params">(df1, df2)</span>:</span></span><br><span class="line">    df_ = ((df1-df2)**<span class="number">2</span>)/df2</span><br><span class="line">    <span class="keyword">return</span> df_.sum(axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="5-3-搬土距离"><a href="#5-3-搬土距离" class="headerlink" title="5.3 搬土距离"></a>5.3 搬土距离</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">EarthMove_Distance</span><span class="params">(df1, df2)</span>:</span></span><br><span class="line">    rows = df1.shape[<span class="number">0</span>]</span><br><span class="line">    df_ = pd.DataFrame([], index=list(range(rows)), columns=[<span class="string">'emd'</span>])</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(rows):</span><br><span class="line">        df_.iloc[i] = emd_samples(df1.iloc[i], df2.iloc[i], bins=<span class="number">2</span>) <span class="comment">#?</span></span><br><span class="line">    <span class="keyword">return</span> df_</span><br></pre></td></tr></table></figure>
-<h2 id="5-4-计算正态分布"><a href="#5-4-计算正态分布" class="headerlink" title="5.4 计算正态分布"></a>5.4 计算正态分布</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">NormFunc</span><span class="params">(x,mu, sigma)</span>:</span></span><br><span class="line">    pdf = np.exp(-((x - mu)**<span class="number">2</span>) / (<span class="number">2</span>* sigma**<span class="number">2</span>)) / (sigma * np.sqrt(<span class="number">2</span>*np.pi))</span><br><span class="line">    <span class="keyword">return</span> pdf</span><br><span class="line">proto_norm = NormFunc(np.arange(<span class="number">1</span>, <span class="number">11</span>,<span class="number">1</span>), mu=<span class="number">5</span>, sigma=<span class="number">1.5</span>)</span><br><span class="line">mirro_norm = proto_norm[<span class="number">4</span>]-proto_norm+<span class="number">0.1</span></span><br><span class="line"><span class="comment"># plt.plot(np.arange(1, 11,1), mirro_norm, color='g',linewidth = 3)</span></span><br></pre></td></tr></table></figure>
-<h2 id="5-5-计算距离"><a href="#5-5-计算距离" class="headerlink" title="5.5 计算距离"></a>5.5 计算距离</h2><p>使用2种距离函数，分别计算原直方图变量和归一化后的直方图变量到4种分布的距离，最后得到$16 \times 7$个扩展的特征。</p>
+<h2 id="卡方距离"><a href="#卡方距离" class="headerlink" title="卡方距离"></a>卡方距离</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Chisquare_Distance</span><span class="params">(df1, df2)</span>:</span></span><br><span class="line">    df_ = ((df1-df2)**<span class="number">2</span>)/df2</span><br><span class="line">    <span class="keyword">return</span> df_.sum(axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="搬土距离"><a href="#搬土距离" class="headerlink" title="搬土距离"></a>搬土距离</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">EarthMove_Distance</span><span class="params">(df1, df2)</span>:</span></span><br><span class="line">    rows = df1.shape[<span class="number">0</span>]</span><br><span class="line">    df_ = pd.DataFrame([], index=list(range(rows)), columns=[<span class="string">'emd'</span>])</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(rows):</span><br><span class="line">        df_.iloc[i] = emd_samples(df1.iloc[i], df2.iloc[i], bins=<span class="number">2</span>) <span class="comment">#?</span></span><br><span class="line">    <span class="keyword">return</span> df_</span><br></pre></td></tr></table></figure>
+<h2 id="计算正态分布"><a href="#计算正态分布" class="headerlink" title="计算正态分布"></a>计算正态分布</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">NormFunc</span><span class="params">(x,mu, sigma)</span>:</span></span><br><span class="line">    pdf = np.exp(-((x - mu)**<span class="number">2</span>) / (<span class="number">2</span>* sigma**<span class="number">2</span>)) / (sigma * np.sqrt(<span class="number">2</span>*np.pi))</span><br><span class="line">    <span class="keyword">return</span> pdf</span><br><span class="line">proto_norm = NormFunc(np.arange(<span class="number">1</span>, <span class="number">11</span>,<span class="number">1</span>), mu=<span class="number">5</span>, sigma=<span class="number">1.5</span>)</span><br><span class="line">mirro_norm = proto_norm[<span class="number">4</span>]-proto_norm+<span class="number">0.1</span></span><br><span class="line"><span class="comment"># plt.plot(np.arange(1, 11,1), mirro_norm, color='g',linewidth = 3)</span></span><br></pre></td></tr></table></figure>
+<h2 id="计算距离"><a href="#计算距离" class="headerlink" title="计算距离"></a>计算距离</h2><p>使用2种距离函数，分别计算原直方图变量和归一化后的直方图变量到4种分布的距离，最后得到$16 \times 7$个扩展的特征。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Calculate_Distance</span><span class="params">(df, df_norm)</span>:</span></span><br><span class="line">    attr_ext = [<span class="string">'c_mean_p'</span>, <span class="string">'c_mean_n'</span>, <span class="string">'c_norm'</span>, <span class="string">'c_mirrnorm'</span>,</span><br><span class="line">                <span class="string">'e_mean_p'</span>, <span class="string">'e_mean_n'</span>, <span class="string">'e_norm'</span>, <span class="string">'e_mirrnorm'</span>,</span><br><span class="line">                <span class="string">'c_mean_p_n'</span>, <span class="string">'c_mean_n_n'</span>, <span class="string">'c_norm_n'</span>, <span class="string">'c_mirrnorm_n'</span>,</span><br><span class="line">                <span class="string">'e_mean_p_n'</span>, <span class="string">'e_mean_n_n'</span>, <span class="string">'e_norm_n'</span>, <span class="string">'e_mirrnorm_n'</span>]</span><br><span class="line">    dist = pd.DataFrame([], columns=attr_ext)</span><br><span class="line">    rows = df.shape[<span class="number">0</span>]</span><br><span class="line">    cols = df.columns.values</span><br><span class="line"></span><br><span class="line">    mean_distribution_pos = np.array([data_pos_mean[cols].values]*rows).reshape(rows, <span class="number">10</span>)</span><br><span class="line">    mean_distribution_neg = np.array([data_neg_mean[cols].values]*rows).reshape(rows, <span class="number">10</span>)</span><br><span class="line">    norm_distribution = np.array([proto_norm]*rows).reshape(rows, <span class="number">10</span>)</span><br><span class="line">    mirrored_norm_distribution = np.array([mirro_norm]*rows).reshape(rows, <span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">    mean_distribution_pos = pd.DataFrame(mean_distribution_pos, columns=df.columns)</span><br><span class="line">    mean_distribution_neg = pd.DataFrame(mean_distribution_neg, columns=df.columns)</span><br><span class="line">    norm_distribution = pd.DataFrame(norm_distribution, columns=df.columns)</span><br><span class="line">    mirrored_norm_distribution = pd.DataFrame(mirrored_norm_distribution, columns=df.columns)</span><br><span class="line"></span><br><span class="line">    dist[<span class="string">'c_mean_p'</span>] = Chisquare_Distance(df, mean_distribution_pos)</span><br><span class="line">    dist[<span class="string">'c_mean_n'</span>] = Chisquare_Distance(df, mean_distribution_neg)</span><br><span class="line">    dist[<span class="string">'c_norm'</span>] = Chisquare_Distance(df, norm_distribution)</span><br><span class="line">    dist[<span class="string">'c_mirrnorm'</span>] = Chisquare_Distance(df, mirrored_norm_distribution)</span><br><span class="line">    dist[<span class="string">'e_mean_p'</span>] = EarthMove_Distance(df, mean_distribution_pos)</span><br><span class="line">    dist[<span class="string">'e_mean_n'</span>] = EarthMove_Distance(df, mean_distribution_neg)</span><br><span class="line">    dist[<span class="string">'e_norm'</span>] = EarthMove_Distance(df, norm_distribution)</span><br><span class="line">    dist[<span class="string">'e_mirrnorm'</span>] = EarthMove_Distance(df, mirrored_norm_distribution)</span><br><span class="line"></span><br><span class="line">    dist[<span class="string">'c_mean_p_n'</span>] = Chisquare_Distance(df_norm, mean_distribution_pos)</span><br><span class="line">    dist[<span class="string">'c_mean_n_n'</span>] = Chisquare_Distance(df_norm, mean_distribution_neg)</span><br><span class="line">    dist[<span class="string">'c_norm_n'</span>] = Chisquare_Distance(df_norm, norm_distribution)</span><br><span class="line">    dist[<span class="string">'c_mirrnorm_n'</span>] = Chisquare_Distance(df_norm, mirrored_norm_distribution)</span><br><span class="line">    dist[<span class="string">'e_mean_p_n'</span>] = EarthMove_Distance(df_norm, mean_distribution_pos)</span><br><span class="line">    dist[<span class="string">'e_mean_n_n'</span>] = EarthMove_Distance(df_norm, mean_distribution_neg)</span><br><span class="line">    dist[<span class="string">'e_norm_n'</span>] = EarthMove_Distance(df_norm, norm_distribution)</span><br><span class="line">    dist[<span class="string">'e_mirrnorm_n'</span>] = EarthMove_Distance(df_norm, mirrored_norm_distribution)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> dist</span><br></pre></td></tr></table></figure>
-<h2 id="5-6数据集扩增"><a href="#5-6数据集扩增" class="headerlink" title="5.6数据集扩增"></a>5.6数据集扩增</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Feature_Expand</span><span class="params">(df)</span>:</span></span><br><span class="line">    attr_expand = pd.DataFrame([])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> var <span class="keyword">in</span> histogram_vars:</span><br><span class="line">        hist = df.loc[:, var+<span class="string">'_000'</span>: var+<span class="string">'_009'</span>]</span><br><span class="line">        norm = Histograms_Norm(hist)</span><br><span class="line">        dist = Calculate_Distance(hist, norm)</span><br><span class="line"></span><br><span class="line">        attr_expand = pd.concat([attr_expand, dist], axis=<span class="number">1</span>)</span><br><span class="line">        attr_expand.columns = list(range(attr_expand.shape[<span class="number">1</span>]))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> pd.concat([df, attr_expand], axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="数据集扩增"><a href="#数据集扩增" class="headerlink" title="数据集扩增"></a>数据集扩增</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Feature_Expand</span><span class="params">(df)</span>:</span></span><br><span class="line">    attr_expand = pd.DataFrame([])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> var <span class="keyword">in</span> histogram_vars:</span><br><span class="line">        hist = df.loc[:, var+<span class="string">'_000'</span>: var+<span class="string">'_009'</span>]</span><br><span class="line">        norm = Histograms_Norm(hist)</span><br><span class="line">        dist = Calculate_Distance(hist, norm)</span><br><span class="line"></span><br><span class="line">        attr_expand = pd.concat([attr_expand, dist], axis=<span class="number">1</span>)</span><br><span class="line">        attr_expand.columns = list(range(attr_expand.shape[<span class="number">1</span>]))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> pd.concat([df, attr_expand], axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Random_Attr</span><span class="params">(df, num)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> np.random.choice(df.columns.values, num)</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data_train = Feature_Expand(data_train)</span><br><span class="line">data_train.to_csv(f_train_expand, sep=<span class="string">','</span>, header=<span class="literal">True</span>, index=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data_test = Feature_Expand(data_test)</span><br><span class="line">data_test.to_csv(f_test_expand, sep=<span class="string">','</span>, header=<span class="literal">True</span>, index=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="6-随机森林"><a href="#6-随机森林" class="headerlink" title="6.随机森林"></a>6.随机森林</h1><p>随机森林算法总是尝试最小化预测误差。它假设所有错误的预测类代价同样昂贵。但IDA挑战并非如此。事实上，假负类(false negative)的代价比假正类(false positive)高50倍。 对于每个特征子集，我们试图通过为预测信度设置阈值来克服这个问题。对结果的分析表明，在大多数情况下，最佳阈值为95％。</p>
+<h1 id="随机森林"><a href="#随机森林" class="headerlink" title="随机森林"></a>随机森林</h1><p>随机森林算法总是尝试最小化预测误差。它假设所有错误的预测类代价同样昂贵。但IDA挑战并非如此。事实上，假负类(false negative)的代价比假正类(false positive)高50倍。 对于每个特征子集，我们试图通过为预测信度设置阈值来克服这个问题。对结果的分析表明，在大多数情况下，最佳阈值为95％。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> accuracy_score</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> recall_score</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> confusion_matrix</span><br><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">RandomForest</span><span class="params">(x_train, y_train, x_test, y_test)</span>:</span></span><br><span class="line">    threshold = <span class="number">0.05</span></span><br><span class="line"></span><br><span class="line">    random_forest = RandomForestClassifier(n_estimators=<span class="number">100</span>, oob_score=<span class="literal">True</span>, random_state=<span class="number">12</span>)</span><br><span class="line">    random_forest.fit(x_train, y_train)</span><br><span class="line"></span><br><span class="line">    predicted_proba = random_forest.predict_proba(x_test)</span><br><span class="line">    predicted = (predicted_proba[:,<span class="number">1</span>] &gt;= threshold).astype(<span class="string">'int'</span>)</span><br><span class="line">    accuracy = accuracy_score(y_test, predicted)</span><br><span class="line">    recall = recall_score(y_test, predicted)</span><br><span class="line">    confusion = confusion_matrix(y_test, predicted)</span><br><span class="line"></span><br><span class="line">    cost_total = confusion[<span class="number">0</span>, <span class="number">1</span>]*<span class="number">10</span> + confusion[<span class="number">1</span>, <span class="number">0</span>]*<span class="number">500</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> [accuracy, recall, (cost_total/<span class="number">16000</span>), confusion]</span><br></pre></td></tr></table></figure>
-<h1 id="7-结果评估"><a href="#7-结果评估" class="headerlink" title="7.结果评估"></a>7.结果评估</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Eval</span><span class="params">(train_file, test_file, case)</span>:</span></span><br><span class="line">    data_train = pd.read_csv(train_file)</span><br><span class="line">    data_train.loc[:, <span class="string">'aa_000'</span>:] = data_cleaner(data_train.loc[:, <span class="string">'aa_000'</span>:])</span><br><span class="line">    data_test = pd.read_csv(test_file)</span><br><span class="line">    data_test.loc[:, <span class="string">'aa_000'</span>:] = data_cleaner(data_test.loc[:, <span class="string">'aa_000'</span>:])</span><br><span class="line"></span><br><span class="line"><span class="comment">#     rand_attr = Random_Attr(data_train.loc[:, 'aa_000':], 210)</span></span><br><span class="line">    rand_attr = data_train.loc[:, <span class="string">'aa_000'</span>:].columns.values</span><br><span class="line"></span><br><span class="line">    x_train = data_train.loc[:, rand_attr]</span><br><span class="line">    x_test = data_test.loc[:, rand_attr]</span><br><span class="line">    y_train = data_train[<span class="string">'class'</span>]</span><br><span class="line">    y_test = data_test[<span class="string">'class'</span>]</span><br><span class="line"></span><br><span class="line">    y_train = y_train.replace(<span class="string">'neg'</span>, <span class="number">0</span>)</span><br><span class="line">    y_train = y_train.replace(<span class="string">'pos'</span>, <span class="number">1</span>)</span><br><span class="line">    y_test = y_test.replace(<span class="string">'neg'</span>, <span class="number">0</span>)</span><br><span class="line">    y_test = y_test.replace(<span class="string">'pos'</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    acc, rec, cost, confusion = RandomForest(x_train, y_train, x_test, y_test)</span><br><span class="line">    res = pd.DataFrame(&#123;</span><br><span class="line">        <span class="string">'Accuracy'</span>: acc,</span><br><span class="line">        <span class="string">'Recall'</span>: rec,</span><br><span class="line">        <span class="string">'Mean Cost'</span>: cost,</span><br><span class="line">        <span class="string">'FP'</span>: confusion[<span class="number">1</span>, <span class="number">0</span>]/(confusion[<span class="number">1</span>, <span class="number">0</span>] + confusion[<span class="number">1</span>, <span class="number">1</span>]),</span><br><span class="line">        <span class="string">'FN'</span>: confusion[<span class="number">0</span>, <span class="number">1</span>]/(confusion[<span class="number">0</span>, <span class="number">1</span>] + confusion[<span class="number">0</span>, <span class="number">0</span>])</span><br><span class="line">    &#125;, index=[case])</span><br><span class="line">    conf = pd.DataFrame(&#123;</span><br><span class="line">        <span class="string">'Neg Predict'</span>: confusion[:, <span class="number">0</span>],</span><br><span class="line">        <span class="string">'Pos Predict'</span>: confusion[:, <span class="number">1</span>]</span><br><span class="line">    &#125;, index=[<span class="string">'Neg Truth'</span>, <span class="string">'Pos Truth'</span>])</span><br><span class="line"></span><br><span class="line">    print(res)</span><br><span class="line">    print(conf)</span><br></pre></td></tr></table></figure>
+<h1 id="结果评估"><a href="#结果评估" class="headerlink" title="结果评估"></a>结果评估</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Eval</span><span class="params">(train_file, test_file, case)</span>:</span></span><br><span class="line">    data_train = pd.read_csv(train_file)</span><br><span class="line">    data_train.loc[:, <span class="string">'aa_000'</span>:] = data_cleaner(data_train.loc[:, <span class="string">'aa_000'</span>:])</span><br><span class="line">    data_test = pd.read_csv(test_file)</span><br><span class="line">    data_test.loc[:, <span class="string">'aa_000'</span>:] = data_cleaner(data_test.loc[:, <span class="string">'aa_000'</span>:])</span><br><span class="line"></span><br><span class="line">    rand_attr = data_train.loc[:, <span class="string">'aa_000'</span>:].columns.values</span><br><span class="line"></span><br><span class="line">    x_train = data_train.loc[:, rand_attr]</span><br><span class="line">    x_test = data_test.loc[:, rand_attr]</span><br><span class="line">    y_train = data_train[<span class="string">'class'</span>]</span><br><span class="line">    y_test = data_test[<span class="string">'class'</span>]</span><br><span class="line"></span><br><span class="line">    y_train = y_train.replace(<span class="string">'neg'</span>, <span class="number">0</span>)</span><br><span class="line">    y_train = y_train.replace(<span class="string">'pos'</span>, <span class="number">1</span>)</span><br><span class="line">    y_test = y_test.replace(<span class="string">'neg'</span>, <span class="number">0</span>)</span><br><span class="line">    y_test = y_test.replace(<span class="string">'pos'</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    acc, rec, cost, confusion = RandomForest(x_train, y_train, x_test, y_test)</span><br><span class="line">    res = pd.DataFrame(&#123;</span><br><span class="line">        <span class="string">'Accuracy'</span>: acc,</span><br><span class="line">        <span class="string">'Recall'</span>: rec,</span><br><span class="line">        <span class="string">'Mean Cost'</span>: cost,</span><br><span class="line">        <span class="string">'FP'</span>: confusion[<span class="number">1</span>, <span class="number">0</span>]/(confusion[<span class="number">1</span>, <span class="number">0</span>] + confusion[<span class="number">1</span>, <span class="number">1</span>]),</span><br><span class="line">        <span class="string">'FN'</span>: confusion[<span class="number">0</span>, <span class="number">1</span>]/(confusion[<span class="number">0</span>, <span class="number">1</span>] + confusion[<span class="number">0</span>, <span class="number">0</span>])</span><br><span class="line">    &#125;, index=[case])</span><br><span class="line">    conf = pd.DataFrame(&#123;</span><br><span class="line">        <span class="string">'Neg Predict'</span>: confusion[:, <span class="number">0</span>],</span><br><span class="line">        <span class="string">'Pos Predict'</span>: confusion[:, <span class="number">1</span>]</span><br><span class="line">    &#125;, index=[<span class="string">'Neg Truth'</span>, <span class="string">'Pos Truth'</span>])</span><br><span class="line"></span><br><span class="line">    print(res)</span><br><span class="line">    print(conf)</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Eval(f_train_expand, f_test_expand, <span class="string">'With Feature Engineering'</span>)</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
@@ -776,7 +746,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="原论文结果"><a href="#原论文结果" class="headerlink" title="原论文结果:"></a>原论文结果:</h3><p><em>To get reproducible results with the stratified sampling in the 10-fold cross-validation a fixed seed was used. Since this may lead to an adaption of the subsets of features to said seed, we did repeat the cross-validation with several others. Overall, the costs per truck stayed approximately the same. Therefore, we assumed that overfitting is not a major problem and the expected costs are in the neighborhood of around 0.6.</em></p>
+<h2 id="原论文结果"><a href="#原论文结果" class="headerlink" title="原论文结果"></a>原论文结果</h2><p><em>To get reproducible results with the stratified sampling in the 10-fold cross-validation a fixed seed was used. Since this may lead to an adaption of the subsets of features to said seed, we did repeat the cross-validation with several others. Overall, the costs per truck stayed approximately the same. Therefore, we assumed that overfitting is not a major problem and the expected costs are in the neighborhood of around 0.6.</em></p>
 <table>
 <thead>
 <tr>
@@ -813,236 +783,6 @@
 </tr>
 </tbody>
 </table>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/" itemprop="url">计算机视觉模型学习和推理学习笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-30T20:39:27+08:00">
-                2019-03-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="一、概率论"><a href="#一、概率论" class="headerlink" title="一、概率论"></a>一、概率论</h1><h2 id="1-概率论介绍"><a href="#1-概率论介绍" class="headerlink" title="1. 概率论介绍"></a>1. 概率论介绍</h2><p><em>Q:为什么使用概率论模型描述计算机视觉问题?</em></p>
-<blockquote>
-<p>In a camera, the three-dimensional world is projected onto the optical surface to<br>form the image: a two-dimensional set of measurements. Our goal is to take these<br>measurements and use them to establish the properties of the world that created<br>them.<br><br>However, there are two problems. <br><br>First, the measurement process is noisy;<br>what we observe is not the amount of light that fell on the sensor, but a noisy<br>estimate of this quantity. We must describe the <strong><em>noise</em></strong> in these data, and for this<br>we use probability. <br><br>Second, the <strong><em>relationship</em></strong> between world and measurements<br>is generally many to one: there may be many real-world congurations that are<br>compatible with the same measurements. The chance that each of these possible<br>worlds is present can also be described using probability.</p>
-</blockquote>
-<p><em>1. 随机变量</em></p>
-<blockquote>
-<p>A random variable may be <strong><em>discrete</em></strong> or <strong><em>continuous</em></strong>.<br><br><strong><em>Discrete</em></strong> random variable takes values from a predefined set. This set may be <strong><em>ordered</em></strong> or <strong><em>unordered</em></strong>. It may be <strong><em>finite</em></strong> or <strong><em>infinite</em></strong>.<br><br><strong><em>Continuous</em></strong> random variables take values that are real numbers. These may be <strong><em>finite</em></strong> or <strong><em>infinite</em></strong>. The probability distribution of a continuous variable can be visualized by plotting the <strong><em>probability density function (pdf)</em></strong> . The probability density for an outcome represents the relative <strong><em>propensity</em></strong> of the random variable to take that value.</p>
-</blockquote>
-<p><em>2. 联合概率</em></p>
-<blockquote>
-<p>Consider two random variables, x and y. If we observe multiple paired instances of x and y, then some combinations of the two outcomes occur more frequently than others. This information is encompassed in the joint probability distribution of x<br>and y, which is written as $Pr(x, y)$.<br></p>
-</blockquote>
-<p><img src="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/./Computer_Vision_Learning_Model_and_Inference_Note/TIM截图20190331105650.png" alt="联合概率分布"></p>
-<p><em>3. 边缘概率</em></p>
-<blockquote>
-<p>We can recover the probability distribution of any single variable from a joint<br>distribution by <strong><em>summing (discrete case)</em></strong> or <strong><em>integrating (continuous case)</em></strong> over all the other variables.</p>
-</blockquote>
-<p><img src="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/./Computer_Vision_Learning_Model_and_Inference_Note/TIM截图20190331105721.png" alt="边缘概率"></p>
-<p>In general, we can recover the joint probability of any subset of variables, by marginalizing over all of the others. For example, given variables, $w, x, y, z,$ where $w$ is discrete and $z$ is continuous, we can recover $Pr(x, y)$ using<br>$$ Pr(x, y) = \sum_{w}\int Pr(w, x, y, z)\ dz $$</p>
-<p><em>4. 条件概率</em></p>
-<blockquote>
-<p>The conditional probability of x given that y takes value $y^<em>$ tells us the relative<br>propensity of the random variable x to take different outcomes given that the random variable y isxed to value $y^</em>$.</p>
-</blockquote>
-<p><img src="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/./Computer_Vision_Learning_Model_and_Inference_Note/TIM截图20190331091350.png" alt="条件概率"></p>
-<p>It is common to write the conditional probability relation without explicitly dening the value $y = y^<em>$ to give the more compact notation<br>$$ Pr(x|y) = \frac{Pr(x, y)}{Pr(y)} $$<br>When we have more than two variables, we may repeatedly take conditional probabilities to divide up the joint probability distribution into a product of terms<br>$$ \begin{align}<br>Pr(w,x,y,z) &amp;= Pr(w,x,y|z)Pr(z) \<br>            &amp;= Pr(w,x|y,z)Pr(y|z)Pr(z) \<br>            &amp;= Pr(w|x,y,z)Pr(x|y,z)Pr(y|z)Pr(z)<br>\end{align} $$
-</em>5. 贝叶斯公式<em><br>$$ \begin{align}<br>Pr(y|x) &amp;= \frac{Pr(x|y)Pr(y)}{Pr(x)} \<br>        &amp;= \frac{Pr(x|y)Pr(y)}{\int Pr(x,y)\ dy} \<br>        &amp;= \frac{Pr(x|y)Pr(y)}{\int Pr(x|y)Pr(y)\ dy}<br>\end{align} $$<br>其中, $Pr(y|x)$ 被称为 **</em>后验概率<strong><em>, $Pr(y)$ 被称作 </em></strong>先验概率<strong><em>, $Pr(x|y)$ 被称作 </em></strong>似然函数<strong><em>, $Pr(x)$ 被称作 </em></strong>依据***。关于机器学习中先验概率和后验概率的理解可以参考: <a href="link2">贝叶斯分类器：机器学习背景下浅聊自己对先验、后验、likelihood、Evidence与贝叶斯公式的理解</a>。</p>
-<p><em>6. 独立性</em></p>
-<blockquote>
-<p>If knowing the value of variable x tells us nothing about variable y (and vice-versa) then we say x and y are independent.</p>
-</blockquote>
-<p><img src="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/./Computer_Vision_Learning_Model_and_Inference_Note/TIM截图20190331100834.png" alt="独立性"></p>
-<p>Here, we can write<br>$$\begin{align}<br>Pr(x|y) &amp;= Pr(x) \<br>Pr(y|x) &amp;= Pr(y)<br>\end{align}$$<br>For independent variables the joint probability $Pr(x, y)$ is the product of the marginal probabilities $Pr(x)$ and $Pr(y)$<br>$$ Pr(x,y) = Pr(x|y)Pr(y) = Pr(x)Pr(y) $$</p>
-<p><em>7. 数学期望</em></p>
-<blockquote>
-<p>Given a function $f[\bullet]$ that returns a value for each possible value $x^<em>$ of the variable $x$ and a probability $Pr(x = x^</em>)$ that each value of $x$ occurs, we sometimes wish to calculate the expected output of the function.</p>
-</blockquote>
-<p>The expected value of a function $f[\bullet]$ of a random variable $x$ is defined as<br>$$\begin{align}<br>E[f[x]] &amp;= \sum_x f[x]Pr(x) \<br>E[f[x]] &amp;= \int f[x]Pr(x)\ dx<br>\end{align}$$<br>关于数学期望的理解可以参考:<a href="link3">数学1——概率与数学期望</a></p>
-<h2 id="2-常用概率分布"><a href="#2-常用概率分布" class="headerlink" title="2. 常用概率分布"></a>2. 常用概率分布</h2><p>概率分布的选择通常依据 $x$ 的定义域。<br><br><img src="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/./Computer_Vision_Learning_Model_and_Inference_Note/TIM截图20190331143029.png" alt="概率分布的选择"><br></p>
-<p><em>Q:什么是模型超参数?</em></p>
-<blockquote>
-<p>When we fit probability models to data, we need<br>to know how uncertain we are about thefit. This uncertainty is represented as a probability distribution over the parameters of the fitted model. So for each distribution used for modeling, there is a second distribution over the associated<br>parameters.<br><br>For example, the Dirichlet is used to model the parameters of the categorical distribution. In this context, the parameters of the Dirichlet<br>would be known as <strong><em>hyperparameters</em></strong>.<br><br>More generally, the hyperparameters determine<br>the shape of the distribution over the parameters of the original distribution.</p>
-</blockquote>
-<p><img src="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/./Computer_Vision_Learning_Model_and_Inference_Note/TIM截图20190331151435.png" alt="模型超参数"><br></p>
-<p>对模型超参数的理解可以参考:<a href="link4">何谓超参数?</a><br></p>
-<p><em>1. Bernoulli distribution</em></p>
-<blockquote>
-<p>The Bernoulli distribution is a discrete distribution that models binary trials: it describes the situation where there are only two possible outcomes $x\in {0,1}$ which are referred to as “failure” and “success.”</p>
-</blockquote>
-<p>The Bernoulli has a single parameter $\lambda\in [0,1]$ which defines the probability of observing a success $x = 1$. The distribution is hence<br>$$ Pr(x) = \lambda^x{(1-\lambda)}^{1-x} $$</p>
-<p><em>2. Beta distribution</em></p>
-<blockquote>
-<p>The beta distribution is a continuous distribution dened on single variable $\lambda$ where $\lambda\in [0, 1]$ . As such it is suitable for representing uncertainty in the parameter $\lambda$ of the Bernoulli distribution.</p>
-</blockquote>
-<p><img src="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/./Computer_Vision_Learning_Model_and_Inference_Note/草图.png" alt="Beta分布"></p>
-<p>Mathematically, the beta distribution has the form<br>$$ Pr(\lambda)=\frac{\Gamma[\alpha+\beta]}{\Gamma[\alpha]\Gamma[\beta]}\lambda^{\alpha-1}(1-\lambda)^{\beta-1} $$</p>
-<p>关于Beta分布和Gamma分布可以参考:<br><br><a href="link5">如何理解beta分布?</a><br><br><a href="link6">超详细理解Gamma分布，Beta分布，多项式分布，Dirichlet狄利克雷分布</a><br><br><a href="link7">Beta分布深入理解</a><br><br><strong><em>Beta分布是伯努利分布的共轭先验。</em></strong> <br></p>
-<p><em>3. Categorical distribution</em></p>
-<blockquote>
-<p>The categorical distribution is a discrete distribution that determines the probability of observing one of K possible outcomes.</p>
-</blockquote>
-<p>The probabilities of observing the K outcomes are held in a $K \times 1$ parameter vector $\lambda = [\lambda_1, \lambda_2, … , \lambda_K]$, where $\lambda_k \in [0, 1]$ and $\sum_{k=1}^{K} \lambda_k = 1$ . The categorical distribution can be visualized as a normalized histogram with K bins and can be<br>written as<br>$$ Pr(x=k) = \lambda_k $$</p>
-<p><em>4. Dirichlet distribution</em></p>
-<blockquote>
-<p>The Dirichlet distribution is defined over $K$ continuous values $\lambda_1…\lambda_K$ where  $\lambda_k\in [0,1]$ and $\sum_{k=1}^{K} = 1$. Hence it is suitable for defining a distribution over the parameters of the categorical distribution.</p>
-</blockquote>
-<p><img src="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/./Computer_Vision_Learning_Model_and_Inference_Note/SharedScreenshot.jpg" alt="Dirichlet分布"></p>
-<p><em>Notes:</em></p>
-<blockquote>
-<ul>
-<li>The distribution is highly peaked around the expected value at high parameter values but pushed away from the expected value at low parameter values.</li>
-<li>The relative values of the parameters determine<br>the expected values $E[\lambda_1]…E[\lambda_k]$ .</li>
-<li>The absolute values determine the concentration around the expected value.</li>
-</ul>
-</blockquote>
-<p>The Dirichlet distribution is defined as:<br>$$ Pr(\lambda_{1…K})=\frac{\Gamma[\sum_{k=1}^{K}]\alpha_k}{\prod_{k=1}^{K}\Gamma[\alpha_k]} \prod_{k=1}^{K}\alpha_{k}^{\alpha_k-1}$$</p>
-<p><strong><em>Dirichlet distribution是Categorical distribution的共轭先验。</em></strong> <br><br>关于LDA的理解可以参考:<br><br><a href="link8">《LDA数学八卦》</a><br><br><a href="link9">Variational Inference for LDA</a><br></p>
-<p><em>5. Univariate normal distribution</em></p>
-<blockquote>
-<p>The univariate normal or Gaussian distribution is defined on continuous values $x\in[-\infty,\infty]$ .<br><br>In vision, it is common to ignore the fact that the intensity of a pixel is quantized and model it with the continuous normal distribution.</p>
-</blockquote>
-<p>The normal distribution is dened as:<br>$$ \Pr(x)=\frac{1}{\sqrt{2\pi\sigma^2}}exp[-0.5(x-\mu)^2/\sigma^2] $$</p>
-<p><em>6. Normal-scaled inverse gamma distribution</em></p>
-<blockquote>
-<p>The normal-scaled inverse gamma distribution is dened over a pair of continuous values $\mu,\sigma^2$, the first of which can take any value and the second of which is constrained to be positive. As such it can define a distribution over the mean and variance parameters of the normal distribution.<br><br>The normal-scaled inverse gamma has four parameters $\alpha,\beta,\gamma,\delta$ where $\alpha,\beta,\gamma$ are positive real numbers but $\delta$ can take any value.</p>
-</blockquote>
-<p><img src="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/./Computer_Vision_Learning_Model_and_Inference_Note/SharedScreenshot_1.jpg" alt="Normal-scaled inverse gamma distribution"></p>
-<p>Normal-scaled inverse gamma distribution is defined as:<br>$$ Pr(\mu,\sigma^2)=\frac{\sqrt{\gamma}}{\sigma\sqrt{2\pi}}\frac{\beta^\alpha}{\Gamma[\alpha]}(\frac{1}{\sigma^2})^{\alpha+1}exp[-\frac{2\beta+\gamma(\delta-\mu)^2}{2\sigma^2}] $$</p>
-<p><em>7. Multivariate normal distribution</em></p>
-<blockquote>
-<p>The multivariate normal or Gaussian distribution models D-dimensional variables $x$ where each of the D elements $x_1…x_D$ is continuous and lies in the range $[-\infty, +\infty]$.<br><br>In machine vision the multivariate normal might model the joint distribution of the intensities of D pixels within a region of the image.</p>
-</blockquote>
-<p>Multivariate normal distribution is defined as:<br>$$ Pr(x)=\frac{1}{(2\pi)^{D/2}|\Sigma|^{1/2}}exp[-0.5(x-\mu)^T\Sigma^{-1}(x-\mu)] $$</p>
-<p><em>8. Normal inverse Wishart distribution</em></p>
-<blockquote>
-<p>The normal inverse Wishart distribution denes a distribution over a $D\times1$ vector $\mu$ and a $D \times D$ positive definite matrix $\Sigma$. As such it is suitable for describing uncertainty in the parameters of a multivariate normal distribution. The normal inverse Wishart has four parameters $\alpha, \Psi,\gamma,\delta$ , where $\alpha$ and $\gamma$ are positive scalars, $\delta$ is a $D \times 1$ vector and $\Psi$ is a positive definite $D \times D$ matrix.</p>
-</blockquote>
-<p>$$ Pr(\mu,\Sigma)=\frac{\gamma^{D/2}|\Psi|^{\alpha/2}exp[-0.5(Tr[\Psi\Sigma^{-1}]+\gamma(\mu-\delta)^T\Sigma^{-1}(\mu-\delta))]}{2^{\alpha D/2}(2\pi)^{D/2}|\Sigma|^{(\alpha+D+2)/2}\Gamma_D[\alpha/2]} $$<br>where $\Gamma_D[\bullet]$ is the multivariate gamma function and Tr[ $\Psi$ ] returns the trace of the<br>matrix $\Psi$.</p>
-<p><em>9. conjugacy</em><br><br>The beta is conjugate to the Bernoulli and the Dirichlet is conjugate to the categorical. When we multiply a distribution with its conjugate, the result is proportional to a new distribution which has the same form as the conjugate.<br><br>For example:<br>$$ Bern_x[\lambda] \cdot Beta_{\lambda}[\alpha,\beta] = k(x,\alpha,\beta)\cdot Beta_\lambda [\overline{\alpha},\overline{\beta}] $$<br>where $k$ is a scaling factor that is constant with respect to the variable of interest $\lambda$. It is important to realize that this was not necessarily the case: if we had picked any distribution other than the beta, then this product would not have retained the same form.<br><br>It can be proved like this:<br>$$ \begin{align}<br>Bern_x[\lambda] \cdot Beta_{\lambda}[\alpha,\beta] &amp;= \lambda^x(1-\lambda)^{1-x}\frac{\Gamma[\alpha+\beta]}{\Gamma[\alpha]\Gamma[\beta]}\lambda^{\alpha-1}(1-\lambda)^{\beta-1} \<br>        &amp;= \frac{\Gamma[\alpha+\beta]}{\Gamma[\alpha]\Gamma[\beta]}\lambda^{x+\alpha-1}(1-\lambda)^{1-x+\beta-1} \<br>        &amp;= \frac{\Gamma[\alpha+\beta]\Gamma[x+\alpha]\Gamma[1-x+\beta]}{\Gamma[\alpha]\Gamma[\beta]\Gamma[x+\alpha+1-x+\beta]}Beta_\lambda[x+\alpha,1-x+\beta] \<br>        &amp;= k(x,\alpha,\beta)\cdot Beta_\lambda[\overline{\alpha}, \overline{\beta}]<br>\end{align}$$</p>
-<h2 id="3-适合的概率模型"><a href="#3-适合的概率模型" class="headerlink" title="3. 适合的概率模型"></a>3. 适合的概率模型</h2><p><em>1. Maximum likelihood</em></p>
-<blockquote>
-<p>As the name suggests, the maximum likelihood (ML) methodnds the set of parameters $\hat{\theta}$ under which the data ${x_i}<em>{i=1}^l$ are most likely.<br><br>Assuming each data point was drawn independently from the distribution, the likelihood function $Pr(X</em>{1…I}|\theta)$ for a set of points is the product of the individual likelihoods.</p>
-</blockquote>
-<p>Hence, the ML estimate of the parameters is<br>$$\begin{align}<br>\hat{\theta} &amp;= \mathop{argmax}\limits_\theta[Pr(X_{1…I}|\theta)] \<br>             &amp;= \mathop{argmax}\limits_\theta[\prod _{i=1}^I Pr(X_i|\theta)]<br>\end{align}$$<br>where $\mathop{argmax}_\theta f[\theta]$ returns the value of $\theta$ that maximizes the argument $f[\theta]$ .<br><br>关于最大似然估计可以参考:<br><br><a href="link10">干货 | 一文详解隐含狄利克雷分布(LDA)</a><br><br><a href="link11">深入浅出最大似然估计(Maximum Likelihood Estimation)</a><br></p>
-<p><em>2. Maximum a posteriori</em></p>
-<blockquote>
-<p>In maximum a posteriori (MAP)tting, we introduce prior information about the parameters $\theta$. From previous experience we may know something about the possible parameter values.</p>
-</blockquote>
-<p>As the name suggests, maximum a posteriori estimation maximizes the posterior probability $Pr(\theta|X_{1…I})$ of the parameters<br>$$\begin{align}<br>\hat{\theta} &amp;= \mathop{argmax}\limits_\theta\left[Pr(\theta|X_{1…I})\right] \<br>             &amp;= \mathop{argmax}\limits_\theta \left[ \frac{Pr(X_{1…I}|\theta)Pr(\theta)}{Pr(X_{1…I})}\right] \<br>             &amp;= \mathop{argmax}\limits_\theta \left[ \frac{\prod_{i=1}^I Pr(X_i|\theta)Pr(\theta)}{Pr(X_{1…I})}\right]<br>\end{align}$$<br>where we have used Bayes’ rule between therst two lines and subsequently assumed independence. In fact, we can discard the denominator as it is constant with<br>respect to the parameters and so does not affect the position of the maximum, and we get<br>$$ \hat{\theta} = \mathop{argmax}\limits_\theta \left[\prod_{i=1}^I Pr(X_i|\theta)Pr(\theta)\right] $$</p>
-<!-- $R^T\sum_{diag}^{'}^{-1}R \rightarrow \left( R^T\sum_{diag}^{'}R\right)^{-1}$ -->
-<p>关于最大后验估计可以参考博客:<br><br><a href="link10">干货 | 一文详解隐含狄利克雷分布(LDA)</a></p>
-<p>资源下载: <a href="link1">《Computer Vision Models Learning and Inference》</a></p>
 
           
         
@@ -1124,7 +864,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1137,7 +877,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
