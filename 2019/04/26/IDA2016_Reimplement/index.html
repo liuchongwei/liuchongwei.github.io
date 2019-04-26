@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="ML,">
 
 
 
@@ -79,13 +79,21 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="1. IDA2016数据集介绍该数据集包括在日常使用中从重型卡车收集的数据。所关注的系统是空气压力系统（APS）。数据集的正类表示与APS系统相关的汽车故障。数据集的负类表示与APS无关的汽车故障。 IDA 2016 Industrial Challenge的目标是将卡车气压系统(APS)的维护成本降到最低。因此，在验证时，如果模型将负类判为正类，则代价是10，如果将正类判为负类，则代价是500。">
+<meta name="keywords" content="ML">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IDA 2016 Industrial Challenge 复现">
+<meta property="og:url" content="http://yoursite.com/2019/04/26/IDA2016_Reimplement/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1. IDA2016数据集介绍该数据集包括在日常使用中从重型卡车收集的数据。所关注的系统是空气压力系统（APS）。数据集的正类表示与APS系统相关的汽车故障。数据集的负类表示与APS无关的汽车故障。 IDA 2016 Industrial Challenge的目标是将卡车气压系统(APS)的维护成本降到最低。因此，在验证时，如果模型将负类判为正类，则代价是10，如果将正类判为负类，则代价是500。">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2019/04/26/IDA2016_Reimplement/IDA2016_Reimplement/output_13_0.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/26/IDA2016_Reimplement/IDA2016_Reimplement/output_13_1.png">
+<meta property="og:updated_time" content="2019-04-26T09:00:25.163Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="IDA 2016 Industrial Challenge 复现">
+<meta name="twitter:description" content="1. IDA2016数据集介绍该数据集包括在日常使用中从重型卡车收集的数据。所关注的系统是空气压力系统（APS）。数据集的正类表示与APS系统相关的汽车故障。数据集的负类表示与APS无关的汽车故障。 IDA 2016 Industrial Challenge的目标是将卡车气压系统(APS)的维护成本降到最低。因此，在验证时，如果模型将负类判为正类，则代价是10，如果将正类判为负类，则代价是500。">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/26/IDA2016_Reimplement/IDA2016_Reimplement/output_13_0.png">
 
 
 
@@ -115,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/26/IDA2016_Reimplement/">
 
 
 
 
 
-  <title>Hexo</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>IDA 2016 Industrial Challenge 复现 | Hexo</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -140,8 +148,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
-  page-home">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +221,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +253,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/26/IDA2016_Reimplement/" itemprop="url">IDA 2016 Industrial Challenge 复现</a></h1>
+          <h1 class="post-title" itemprop="name headline">IDA 2016 Industrial Challenge 复现</h1>
         
 
         <div class="post-meta">
@@ -298,9 +303,7 @@
       
 
       
-        
-          
-            <h1 id="1-IDA2016数据集介绍"><a href="#1-IDA2016数据集介绍" class="headerlink" title="1. IDA2016数据集介绍"></a>1. IDA2016数据集介绍</h1><p>该数据集包括在日常使用中从重型卡车收集的数据。所关注的系统是空气压力系统（APS）。<strong><em>数据集的正类表示与APS系统相关的汽车故障。数据集的负类表示与APS无关的汽车故障。</em></strong></p>
+        <h1 id="1-IDA2016数据集介绍"><a href="#1-IDA2016数据集介绍" class="headerlink" title="1. IDA2016数据集介绍"></a>1. IDA2016数据集介绍</h1><p>该数据集包括在日常使用中从重型卡车收集的数据。所关注的系统是空气压力系统（APS）。<strong><em>数据集的正类表示与APS系统相关的汽车故障。数据集的负类表示与APS无关的汽车故障。</em></strong></p>
 <p>IDA 2016 Industrial Challenge的目标是将卡车气压系统(APS)的维护成本降到最低。因此，在验证时，<strong><em>如果模型将负类判为正类，则代价是10，如果将正类判为负类，则代价是500。</em></strong>这就满足了成本最小化的需求。</p>
 <h1 id="2-IDA2016数据集说明"><a href="#2-IDA2016数据集说明" class="headerlink" title="2. IDA2016数据集说明"></a>2. IDA2016数据集说明</h1><p>数据集的属性名称已匿名。该数据集总共有171个变量，其中包含1个类变量、100个单数值变量和7个直方图变量，每个直方图变量由10个单值变量（箱子）组成。缺失值用“na”表示。</p>
 <p>训练集包含60000行，其中1000行属于正类，59000行属于负类。</p>
@@ -814,8 +817,6 @@
 </tbody>
 </table>
 
-          
-        
       
     </div>
     
@@ -830,244 +831,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/" itemprop="url">计算机视觉模型学习和推理学习笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-30T20:39:27+08:00">
-                2019-03-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/ML/" rel="tag"># ML</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="一、概率论"><a href="#一、概率论" class="headerlink" title="一、概率论"></a>一、概率论</h1><h2 id="1-概率论介绍"><a href="#1-概率论介绍" class="headerlink" title="1. 概率论介绍"></a>1. 概率论介绍</h2><p><em>Q:为什么使用概率论模型描述计算机视觉问题?</em></p>
-<blockquote>
-<p>In a camera, the three-dimensional world is projected onto the optical surface to<br>form the image: a two-dimensional set of measurements. Our goal is to take these<br>measurements and use them to establish the properties of the world that created<br>them.<br><br>However, there are two problems. <br><br>First, the measurement process is noisy;<br>what we observe is not the amount of light that fell on the sensor, but a noisy<br>estimate of this quantity. We must describe the <strong><em>noise</em></strong> in these data, and for this<br>we use probability. <br><br>Second, the <strong><em>relationship</em></strong> between world and measurements<br>is generally many to one: there may be many real-world congurations that are<br>compatible with the same measurements. The chance that each of these possible<br>worlds is present can also be described using probability.</p>
-</blockquote>
-<p><em>1. 随机变量</em></p>
-<blockquote>
-<p>A random variable may be <strong><em>discrete</em></strong> or <strong><em>continuous</em></strong>.<br><br><strong><em>Discrete</em></strong> random variable takes values from a predefined set. This set may be <strong><em>ordered</em></strong> or <strong><em>unordered</em></strong>. It may be <strong><em>finite</em></strong> or <strong><em>infinite</em></strong>.<br><br><strong><em>Continuous</em></strong> random variables take values that are real numbers. These may be <strong><em>finite</em></strong> or <strong><em>infinite</em></strong>. The probability distribution of a continuous variable can be visualized by plotting the <strong><em>probability density function (pdf)</em></strong> . The probability density for an outcome represents the relative <strong><em>propensity</em></strong> of the random variable to take that value.</p>
-</blockquote>
-<p><em>2. 联合概率</em></p>
-<blockquote>
-<p>Consider two random variables, x and y. If we observe multiple paired instances of x and y, then some combinations of the two outcomes occur more frequently than others. This information is encompassed in the joint probability distribution of x<br>and y, which is written as $Pr(x, y)$.<br></p>
-</blockquote>
-<p><img src="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/./Computer_Vision_Learning_Model_and_Inference_Note/TIM截图20190331105650.png" alt="联合概率分布"></p>
-<p><em>3. 边缘概率</em></p>
-<blockquote>
-<p>We can recover the probability distribution of any single variable from a joint<br>distribution by <strong><em>summing (discrete case)</em></strong> or <strong><em>integrating (continuous case)</em></strong> over all the other variables.</p>
-</blockquote>
-<p><img src="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/./Computer_Vision_Learning_Model_and_Inference_Note/TIM截图20190331105721.png" alt="边缘概率"></p>
-<p>In general, we can recover the joint probability of any subset of variables, by marginalizing over all of the others. For example, given variables, $w, x, y, z,$ where $w$ is discrete and $z$ is continuous, we can recover $Pr(x, y)$ using<br>$$ Pr(x, y) = \sum_{w}\int Pr(w, x, y, z)\ dz $$</p>
-<p><em>4. 条件概率</em></p>
-<blockquote>
-<p>The conditional probability of x given that y takes value $y^<em>$ tells us the relative<br>propensity of the random variable x to take different outcomes given that the random variable y isxed to value $y^</em>$.</p>
-</blockquote>
-<p><img src="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/./Computer_Vision_Learning_Model_and_Inference_Note/TIM截图20190331091350.png" alt="条件概率"></p>
-<p>It is common to write the conditional probability relation without explicitly dening the value $y = y^<em>$ to give the more compact notation<br>$$ Pr(x|y) = \frac{Pr(x, y)}{Pr(y)} $$<br>When we have more than two variables, we may repeatedly take conditional probabilities to divide up the joint probability distribution into a product of terms<br>$$ \begin{align}<br>Pr(w,x,y,z) &amp;= Pr(w,x,y|z)Pr(z) \<br>            &amp;= Pr(w,x|y,z)Pr(y|z)Pr(z) \<br>            &amp;= Pr(w|x,y,z)Pr(x|y,z)Pr(y|z)Pr(z)<br>\end{align} $$
-</em>5. 贝叶斯公式<em><br>$$ \begin{align}<br>Pr(y|x) &amp;= \frac{Pr(x|y)Pr(y)}{Pr(x)} \<br>        &amp;= \frac{Pr(x|y)Pr(y)}{\int Pr(x,y)\ dy} \<br>        &amp;= \frac{Pr(x|y)Pr(y)}{\int Pr(x|y)Pr(y)\ dy}<br>\end{align} $$<br>其中, $Pr(y|x)$ 被称为 **</em>后验概率<strong><em>, $Pr(y)$ 被称作 </em></strong>先验概率<strong><em>, $Pr(x|y)$ 被称作 </em></strong>似然函数<strong><em>, $Pr(x)$ 被称作 </em></strong>依据***。关于机器学习中先验概率和后验概率的理解可以参考: <a href="link2">贝叶斯分类器：机器学习背景下浅聊自己对先验、后验、likelihood、Evidence与贝叶斯公式的理解</a>。</p>
-<p><em>6. 独立性</em></p>
-<blockquote>
-<p>If knowing the value of variable x tells us nothing about variable y (and vice-versa) then we say x and y are independent.</p>
-</blockquote>
-<p><img src="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/./Computer_Vision_Learning_Model_and_Inference_Note/TIM截图20190331100834.png" alt="独立性"></p>
-<p>Here, we can write<br>$$\begin{align}<br>Pr(x|y) &amp;= Pr(x) \<br>Pr(y|x) &amp;= Pr(y)<br>\end{align}$$<br>For independent variables the joint probability $Pr(x, y)$ is the product of the marginal probabilities $Pr(x)$ and $Pr(y)$<br>$$ Pr(x,y) = Pr(x|y)Pr(y) = Pr(x)Pr(y) $$</p>
-<p><em>7. 数学期望</em></p>
-<blockquote>
-<p>Given a function $f[\bullet]$ that returns a value for each possible value $x^<em>$ of the variable $x$ and a probability $Pr(x = x^</em>)$ that each value of $x$ occurs, we sometimes wish to calculate the expected output of the function.</p>
-</blockquote>
-<p>The expected value of a function $f[\bullet]$ of a random variable $x$ is defined as<br>$$\begin{align}<br>E[f[x]] &amp;= \sum_x f[x]Pr(x) \<br>E[f[x]] &amp;= \int f[x]Pr(x)\ dx<br>\end{align}$$<br>关于数学期望的理解可以参考:<a href="link3">数学1——概率与数学期望</a></p>
-<h2 id="2-常用概率分布"><a href="#2-常用概率分布" class="headerlink" title="2. 常用概率分布"></a>2. 常用概率分布</h2><p>概率分布的选择通常依据 $x$ 的定义域。<br><br><img src="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/./Computer_Vision_Learning_Model_and_Inference_Note/TIM截图20190331143029.png" alt="概率分布的选择"><br></p>
-<p><em>Q:什么是模型超参数?</em></p>
-<blockquote>
-<p>When we fit probability models to data, we need<br>to know how uncertain we are about thefit. This uncertainty is represented as a probability distribution over the parameters of the fitted model. So for each distribution used for modeling, there is a second distribution over the associated<br>parameters.<br><br>For example, the Dirichlet is used to model the parameters of the categorical distribution. In this context, the parameters of the Dirichlet<br>would be known as <strong><em>hyperparameters</em></strong>.<br><br>More generally, the hyperparameters determine<br>the shape of the distribution over the parameters of the original distribution.</p>
-</blockquote>
-<p><img src="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/./Computer_Vision_Learning_Model_and_Inference_Note/TIM截图20190331151435.png" alt="模型超参数"><br></p>
-<p>对模型超参数的理解可以参考:<a href="link4">何谓超参数?</a><br></p>
-<p><em>1. Bernoulli distribution</em></p>
-<blockquote>
-<p>The Bernoulli distribution is a discrete distribution that models binary trials: it describes the situation where there are only two possible outcomes $x\in {0,1}$ which are referred to as “failure” and “success.”</p>
-</blockquote>
-<p>The Bernoulli has a single parameter $\lambda\in [0,1]$ which defines the probability of observing a success $x = 1$. The distribution is hence<br>$$ Pr(x) = \lambda^x{(1-\lambda)}^{1-x} $$</p>
-<p><em>2. Beta distribution</em></p>
-<blockquote>
-<p>The beta distribution is a continuous distribution dened on single variable $\lambda$ where $\lambda\in [0, 1]$ . As such it is suitable for representing uncertainty in the parameter $\lambda$ of the Bernoulli distribution.</p>
-</blockquote>
-<p><img src="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/./Computer_Vision_Learning_Model_and_Inference_Note/草图.png" alt="Beta分布"></p>
-<p>Mathematically, the beta distribution has the form<br>$$ Pr(\lambda)=\frac{\Gamma[\alpha+\beta]}{\Gamma[\alpha]\Gamma[\beta]}\lambda^{\alpha-1}(1-\lambda)^{\beta-1} $$</p>
-<p>关于Beta分布和Gamma分布可以参考:<br><br><a href="link5">如何理解beta分布?</a><br><br><a href="link6">超详细理解Gamma分布，Beta分布，多项式分布，Dirichlet狄利克雷分布</a><br><br><a href="link7">Beta分布深入理解</a><br><br><strong><em>Beta分布是伯努利分布的共轭先验。</em></strong> <br></p>
-<p><em>3. Categorical distribution</em></p>
-<blockquote>
-<p>The categorical distribution is a discrete distribution that determines the probability of observing one of K possible outcomes.</p>
-</blockquote>
-<p>The probabilities of observing the K outcomes are held in a $K \times 1$ parameter vector $\lambda = [\lambda_1, \lambda_2, … , \lambda_K]$, where $\lambda_k \in [0, 1]$ and $\sum_{k=1}^{K} \lambda_k = 1$ . The categorical distribution can be visualized as a normalized histogram with K bins and can be<br>written as<br>$$ Pr(x=k) = \lambda_k $$</p>
-<p><em>4. Dirichlet distribution</em></p>
-<blockquote>
-<p>The Dirichlet distribution is defined over $K$ continuous values $\lambda_1…\lambda_K$ where  $\lambda_k\in [0,1]$ and $\sum_{k=1}^{K} = 1$. Hence it is suitable for defining a distribution over the parameters of the categorical distribution.</p>
-</blockquote>
-<p><img src="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/./Computer_Vision_Learning_Model_and_Inference_Note/SharedScreenshot.jpg" alt="Dirichlet分布"></p>
-<p><em>Notes:</em></p>
-<blockquote>
-<ul>
-<li>The distribution is highly peaked around the expected value at high parameter values but pushed away from the expected value at low parameter values.</li>
-<li>The relative values of the parameters determine<br>the expected values $E[\lambda_1]…E[\lambda_k]$ .</li>
-<li>The absolute values determine the concentration around the expected value.</li>
-</ul>
-</blockquote>
-<p>The Dirichlet distribution is defined as:<br>$$ Pr(\lambda_{1…K})=\frac{\Gamma[\sum_{k=1}^{K}]\alpha_k}{\prod_{k=1}^{K}\Gamma[\alpha_k]} \prod_{k=1}^{K}\alpha_{k}^{\alpha_k-1}$$</p>
-<p><strong><em>Dirichlet distribution是Categorical distribution的共轭先验。</em></strong> <br><br>关于LDA的理解可以参考:<br><br><a href="link8">《LDA数学八卦》</a><br><br><a href="link9">Variational Inference for LDA</a><br></p>
-<p><em>5. Univariate normal distribution</em></p>
-<blockquote>
-<p>The univariate normal or Gaussian distribution is defined on continuous values $x\in[-\infty,\infty]$ .<br><br>In vision, it is common to ignore the fact that the intensity of a pixel is quantized and model it with the continuous normal distribution.</p>
-</blockquote>
-<p>The normal distribution is dened as:<br>$$ \Pr(x)=\frac{1}{\sqrt{2\pi\sigma^2}}exp[-0.5(x-\mu)^2/\sigma^2] $$</p>
-<p><em>6. Normal-scaled inverse gamma distribution</em></p>
-<blockquote>
-<p>The normal-scaled inverse gamma distribution is dened over a pair of continuous values $\mu,\sigma^2$, the first of which can take any value and the second of which is constrained to be positive. As such it can define a distribution over the mean and variance parameters of the normal distribution.<br><br>The normal-scaled inverse gamma has four parameters $\alpha,\beta,\gamma,\delta$ where $\alpha,\beta,\gamma$ are positive real numbers but $\delta$ can take any value.</p>
-</blockquote>
-<p><img src="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/./Computer_Vision_Learning_Model_and_Inference_Note/SharedScreenshot_1.jpg" alt="Normal-scaled inverse gamma distribution"></p>
-<p>Normal-scaled inverse gamma distribution is defined as:<br>$$ Pr(\mu,\sigma^2)=\frac{\sqrt{\gamma}}{\sigma\sqrt{2\pi}}\frac{\beta^\alpha}{\Gamma[\alpha]}(\frac{1}{\sigma^2})^{\alpha+1}exp[-\frac{2\beta+\gamma(\delta-\mu)^2}{2\sigma^2}] $$</p>
-<p><em>7. Multivariate normal distribution</em></p>
-<blockquote>
-<p>The multivariate normal or Gaussian distribution models D-dimensional variables $x$ where each of the D elements $x_1…x_D$ is continuous and lies in the range $[-\infty, +\infty]$.<br><br>In machine vision the multivariate normal might model the joint distribution of the intensities of D pixels within a region of the image.</p>
-</blockquote>
-<p>Multivariate normal distribution is defined as:<br>$$ Pr(x)=\frac{1}{(2\pi)^{D/2}|\Sigma|^{1/2}}exp[-0.5(x-\mu)^T\Sigma^{-1}(x-\mu)] $$</p>
-<p><em>8. Normal inverse Wishart distribution</em></p>
-<blockquote>
-<p>The normal inverse Wishart distribution denes a distribution over a $D\times1$ vector $\mu$ and a $D \times D$ positive definite matrix $\Sigma$. As such it is suitable for describing uncertainty in the parameters of a multivariate normal distribution. The normal inverse Wishart has four parameters $\alpha, \Psi,\gamma,\delta$ , where $\alpha$ and $\gamma$ are positive scalars, $\delta$ is a $D \times 1$ vector and $\Psi$ is a positive definite $D \times D$ matrix.</p>
-</blockquote>
-<p>$$ Pr(\mu,\Sigma)=\frac{\gamma^{D/2}|\Psi|^{\alpha/2}exp[-0.5(Tr[\Psi\Sigma^{-1}]+\gamma(\mu-\delta)^T\Sigma^{-1}(\mu-\delta))]}{2^{\alpha D/2}(2\pi)^{D/2}|\Sigma|^{(\alpha+D+2)/2}\Gamma_D[\alpha/2]} $$<br>where $\Gamma_D[\bullet]$ is the multivariate gamma function and Tr[ $\Psi$ ] returns the trace of the<br>matrix $\Psi$.</p>
-<p><em>9. conjugacy</em><br><br>The beta is conjugate to the Bernoulli and the Dirichlet is conjugate to the categorical. When we multiply a distribution with its conjugate, the result is proportional to a new distribution which has the same form as the conjugate.<br><br>For example:<br>$$ Bern_x[\lambda] \cdot Beta_{\lambda}[\alpha,\beta] = k(x,\alpha,\beta)\cdot Beta_\lambda [\overline{\alpha},\overline{\beta}] $$<br>where $k$ is a scaling factor that is constant with respect to the variable of interest $\lambda$. It is important to realize that this was not necessarily the case: if we had picked any distribution other than the beta, then this product would not have retained the same form.<br><br>It can be proved like this:<br>$$ \begin{align}<br>Bern_x[\lambda] \cdot Beta_{\lambda}[\alpha,\beta] &amp;= \lambda^x(1-\lambda)^{1-x}\frac{\Gamma[\alpha+\beta]}{\Gamma[\alpha]\Gamma[\beta]}\lambda^{\alpha-1}(1-\lambda)^{\beta-1} \<br>        &amp;= \frac{\Gamma[\alpha+\beta]}{\Gamma[\alpha]\Gamma[\beta]}\lambda^{x+\alpha-1}(1-\lambda)^{1-x+\beta-1} \<br>        &amp;= \frac{\Gamma[\alpha+\beta]\Gamma[x+\alpha]\Gamma[1-x+\beta]}{\Gamma[\alpha]\Gamma[\beta]\Gamma[x+\alpha+1-x+\beta]}Beta_\lambda[x+\alpha,1-x+\beta] \<br>        &amp;= k(x,\alpha,\beta)\cdot Beta_\lambda[\overline{\alpha}, \overline{\beta}]<br>\end{align}$$</p>
-<h2 id="3-适合的概率模型"><a href="#3-适合的概率模型" class="headerlink" title="3. 适合的概率模型"></a>3. 适合的概率模型</h2><p><em>1. Maximum likelihood</em></p>
-<blockquote>
-<p>As the name suggests, the maximum likelihood (ML) methodnds the set of parameters $\hat{\theta}$ under which the data ${x_i}<em>{i=1}^l$ are most likely.<br><br>Assuming each data point was drawn independently from the distribution, the likelihood function $Pr(X</em>{1…I}|\theta)$ for a set of points is the product of the individual likelihoods.</p>
-</blockquote>
-<p>Hence, the ML estimate of the parameters is<br>$$\begin{align}<br>\hat{\theta} &amp;= \mathop{argmax}\limits_\theta[Pr(X_{1…I}|\theta)] \<br>             &amp;= \mathop{argmax}\limits_\theta[\prod _{i=1}^I Pr(X_i|\theta)]<br>\end{align}$$<br>where $\mathop{argmax}_\theta f[\theta]$ returns the value of $\theta$ that maximizes the argument $f[\theta]$ .<br><br>关于最大似然估计可以参考:<br><br><a href="link10">干货 | 一文详解隐含狄利克雷分布(LDA)</a><br><br><a href="link11">深入浅出最大似然估计(Maximum Likelihood Estimation)</a><br></p>
-<p><em>2. Maximum a posteriori</em></p>
-<blockquote>
-<p>In maximum a posteriori (MAP)tting, we introduce prior information about the parameters $\theta$. From previous experience we may know something about the possible parameter values.</p>
-</blockquote>
-<p>As the name suggests, maximum a posteriori estimation maximizes the posterior probability $Pr(\theta|X_{1…I})$ of the parameters<br>$$\begin{align}<br>\hat{\theta} &amp;= \mathop{argmax}\limits_\theta\left[Pr(\theta|X_{1…I})\right] \<br>             &amp;= \mathop{argmax}\limits_\theta \left[ \frac{Pr(X_{1…I}|\theta)Pr(\theta)}{Pr(X_{1…I})}\right] \<br>             &amp;= \mathop{argmax}\limits_\theta \left[ \frac{\prod_{i=1}^I Pr(X_i|\theta)Pr(\theta)}{Pr(X_{1…I})}\right]<br>\end{align}$$<br>where we have used Bayes’ rule between therst two lines and subsequently assumed independence. In fact, we can discard the denominator as it is constant with<br>respect to the parameters and so does not affect the position of the maximum, and we get<br>$$ \hat{\theta} = \mathop{argmax}\limits_\theta \left[\prod_{i=1}^I Pr(X_i|\theta)Pr(\theta)\right] $$</p>
-<!-- $R^T\sum_{diag}^{'}^{-1}R \rightarrow \left( R^T\sum_{diag}^{'}R\right)^{-1}$ -->
-<p>关于最大后验估计可以参考博客:<br><br><a href="link10">干货 | 一文详解隐含狄利克雷分布(LDA)</a></p>
-<p>资源下载: <a href="link1">《Computer Vision Models Learning and Inference》</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/30/Computer_Vision_Learning_Model_and_Inference_Note/" rel="next" title="计算机视觉模型学习和推理学习笔记">
+                <i class="fa fa-chevron-left"></i> 计算机视觉模型学习和推理学习笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -1077,10 +870,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -1088,6 +882,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -1108,8 +906,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1160,6 +967,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-IDA2016数据集介绍"><span class="nav-number">1.</span> <span class="nav-text">1. IDA2016数据集介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-IDA2016数据集说明"><span class="nav-number">2.</span> <span class="nav-text">2. IDA2016数据集说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-数据清洗"><span class="nav-number">3.</span> <span class="nav-text">3. 数据清洗</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-数据分析"><span class="nav-number">4.</span> <span class="nav-text">4. 数据分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-特征工程"><span class="nav-number">5.</span> <span class="nav-text">5.特征工程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-归一化"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 归一化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-卡方距离"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 卡方距离</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3-搬土距离"><span class="nav-number">5.3.</span> <span class="nav-text">5.3 搬土距离</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4-计算正态分布"><span class="nav-number">5.4.</span> <span class="nav-text">5.4 计算正态分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-5-计算距离"><span class="nav-number">5.5.</span> <span class="nav-text">5.5 计算距离</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-6数据集扩增"><span class="nav-number">5.6.</span> <span class="nav-text">5.6数据集扩增</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-随机森林"><span class="nav-number">6.</span> <span class="nav-text">6.随机森林</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-结果评估"><span class="nav-number">7.</span> <span class="nav-text">7.结果评估</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原论文结果"><span class="nav-number">7.0.1.</span> <span class="nav-text">原论文结果:</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1293,6 +1116,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
